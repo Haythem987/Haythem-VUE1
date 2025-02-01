@@ -1,15 +1,8 @@
 <script setup lang="ts">
-interface RouterItem {
-  path: string,
-  name: string
-}
+import {useRouteDefine, useNowRouteTitle} from "~/composables/useRouteParams";
 
-const route = reactive<RouterItem[]>([
-      {name: '首页', path: '/'},
-      {name: '计数器', path: '/counter'},
-      {name: '信息', path: '/info'},
-    ]
-)
+const route = useRouteDefine()
+const routeTitle = useNowRouteTitle()
 const menuTitle = ref("NUXT练习项目")
 </script>
 
@@ -28,8 +21,13 @@ const menuTitle = ref("NUXT练习项目")
 
       </div>
     </div>
-    <div class="m-4">
-      <NuxtPage/>
+    <div class="flex flex-col p-4 w-full">
+      <div class="border-b border-gray-2 p-4 font-bold text-lg">
+        {{routeTitle}}
+      </div>
+      <div class="m-4">
+        <NuxtPage/>
+      </div>
     </div>
   </div>
 
