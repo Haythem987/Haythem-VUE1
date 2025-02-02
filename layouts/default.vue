@@ -21,7 +21,7 @@ const menuTitle = ref("NUXT练习项目")
 
       </div>
     </div>
-    <div class="flex flex-col p-4 w-full">
+    <div class="flex flex-col w-full">
       <div class="border-b border-gray-2 p-4 font-bold text-lg">
         {{routeTitle}}
       </div>
