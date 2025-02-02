@@ -12,7 +12,7 @@ const menuTitle = ref("NUXT练习项目")
       <div class="flex flex-col p-4">
         <div class="font-bold text-xl text-center">{{ menuTitle }}</div>
         <!--suppress HtmlUnknownTarget -->
-        <NuxtLink v-for="item in route" :key="item.path" :to="item.path">
+        <NuxtLink v-for="item in route" :key="item.name" :to="item.path">
           <button class="hover:bg-blue-2 rounded-md transition-colors border shadow-md shadow-gray-1 p-1 mb-2 w-full">
             {{ item.name }}
           </button>
@@ -36,3 +36,4 @@ const menuTitle = ref("NUXT练习项目")
 <style scoped>
 
 </style>
+
