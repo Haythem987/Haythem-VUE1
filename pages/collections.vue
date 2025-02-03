@@ -36,16 +36,17 @@ const handleTagsClick = (text: string) => {
     <div class="bg-white bg-op-50 rounded-xl w-70% h-70% shadow-xl shadow-gray-6 shadow-op-20 fixed">
       <div class="text-center font-bold text-2xl mb-4">Popular collections</div>
       <div class="flex">
-      <div class="p-4">
-        <div @click="handleTagsClick(item)" v-for="item in tags" :key="item"
-             class="bg-op-80 inline-block px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition-colors duration-200 mr-2">
-          {{ item }}
-        </div>
-        <div class="flex flex-wrap overflow-y-auto max-h-400px justify-center">
-          <CollectionsCard v-for="item in collections" :key="item.id" :id="item.id" :name="item.name"
-                           :likes="item.likes" :imgSrc="itemImgPathPrefix+item.imgSrc">
+        <div class="p-4">
+          <div @click="handleTagsClick(item)" v-for="item in tags" :key="item"
+               class="bg-op-80 inline-block px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition-colors duration-200 mr-2">
+            {{ item }}
+          </div>
+          <div class="flex flex-wrap overflow-y-auto max-h-400px justify-center">
+            <CollectionsCard v-for="item in collections" :key="item.id" :id="item.id" :name="item.name"
+                             :likes="item.likes" :imgSrc="itemImgPathPrefix+item.imgSrc">
 
-          </CollectionsCard></div>
+            </CollectionsCard>
+          </div>
         </div>
       </div>
     </div>
