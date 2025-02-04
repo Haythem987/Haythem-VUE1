@@ -19,10 +19,10 @@ const convertLocalImgSrcToPixivSrc = (imgSrc: string) => {
 </script>
 
 <template>
-  <div class="w-380px h-380px" @click="handleClick(name,likes,imgSrc)">
+  <div class="w-380px h-380px bg-white m-5 rounded-xl" @click="handleClick(name,likes,imgSrc)">
     <div class="grip gap-3 p-4">
       <div class="overflow-hidden rounded-xl">
-        <NuxtImg class="w-full h-200px object-cover" :src="imgSrc" alt="bg"></NuxtImg>
+        <el-image class="w-350px h-200px" :src="imgSrc" alt="bg"></el-image>
       </div>
       <div class="grid grid-cols-3 gap-3 mt-4">
         <div class="bg-gray-3 rounded-xl h-80px"></div>
