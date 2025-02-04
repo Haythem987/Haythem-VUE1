@@ -11,7 +11,7 @@ const handleClick = (name: string, likes: number, imgSrc: string) => {
 }
 const convertLocalImgSrcToPixivSrc = (imgSrc: string) => {
   if (imgSrc === undefined) return
-  const pixivUrlPrefix = "https://pixiv,net/artworks/"
+  const pixivUrlPrefix = "https://pixiv.net/artworks/"
   const searchImgIdRegex = new RegExp("/images/([0-9]*)_.*")
   const imgId = imgSrc.match(searchImgIdRegex)
   return pixivUrlPrefix + imgId
