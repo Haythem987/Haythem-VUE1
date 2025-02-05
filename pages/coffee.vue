@@ -11,7 +11,7 @@ const handleClose = (done: () => void) => {
 </script>
 
 <template>
-  <el-container class="justify-center items-center w-screen h-screen">
+  <div>
     <el-image src="images/126854741_p0.png" class="w-full h-full fixed -z-10" fit="cover"></el-image>
     <el-dialog v-model="dialogVisible"
                title="Tips"
@@ -19,8 +19,7 @@ const handleClose = (done: () => void) => {
                :before-close="handleClose" class="fixed bg-black">
       1212
     </el-dialog>
-
-  </el-container>
+  </div>
 </template>
 
 <style scoped>

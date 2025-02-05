@@ -6,8 +6,7 @@ const increment = () => num.value++
 <template>
 
   <div class="flex w-full h-full items-center justify-center">
-    <el-image class="w-full h-full object-cover -z-10" src="/images/7f3904c34dfe5414896b74934a7d5b2c.jpg"
-              alt="counter"></el-image>
+    <el-image class="w-full h-full -z-10" src="/images/7f3904c34dfe5414896b74934a7d5b2c.jpg" fit="cover"></el-image>
     <div class="p-8 bg-gray-1 bg-op-70 rounded-lg w-400px h-300px fixed flex flex-col items-center">
       <div class="font-bold text-2xl mt-4">Counter</div>
       <div class="font-bold text-1xl mt-4">Count:{{ num }}</div>
@@ -16,8 +15,6 @@ const increment = () => num.value++
           @click="increment">+1
       </button>
     </div>
-
-
   </div>
 </template>
 
