@@ -6,16 +6,23 @@ export interface CoffeeData {
     maxCaffeine: number
 }
 
-export interface TableTitle {
-    id: number;
-    nameTitle: string
-    brandTitle: string
-    minCaffeineTitle: string
-    maxCaffeineTitle: string
+export interface tableLabelDefine {
+    key:string
+    name: string
+    width?:string
+}
+export const useCoffeeDataLabel = () => {
+    return useState<tableLabelDefine[]>('CoffeeDataLabel', () => [
+        {key: "brand", name: "品牌", width: "200px"},
+        {key: "name", name: "名称", width: "120px"},
+        {key: "minCaffeine", name: "最小咖啡因", width: "120px"},
+        {key: "maxCaffeine", name: "最大咖啡因", width: "120px"},
+    ])
 }
 
+
 export const useCoffeeData = () => {
-    return useState<CoffeeData[]>('coffeeData', () => [
+    return useState<CoffeeData[]>('CoffeeData', () => [
         {id: 0, brand: 'AIRBAG COFFEE', name: '美式咖啡', minCaffeine: 388, maxCaffeine: 388,},
         {id: 1, brand: 'AIRBAG COFFEE', name: '香草拿铁', minCaffeine: 116.1, maxCaffeine: 116.1},
         {id: 2, brand: 'AIRBAG COFFEE', name: '拿铁', minCaffeine: 117.94, maxCaffeine: 117.94},
