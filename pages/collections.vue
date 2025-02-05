@@ -31,24 +31,20 @@ const handleTagsClick = (text: string) => {
 </script>
 
 <template>
-
-  <div class="flex w-screen h-screen justify-center items-center">
-    <el-image class="w-full h-full -z-10 fixed object-cover" src="/images/39930673_p0.jpg" alt="bg"></el-image>
-    <div class="bg-white bg-op-50 rounded-xl w-70% h-70% shadow-xl shadow-gray-6 shadow-op-20 fixed">
-      <div class="text-center font-bold text-2xl mb-4">Popular collections</div>
-      <div class="flex">
-        <div class="p-4">
-          <div @click="handleTagsClick(item)" v-for="item in tags" :key="item"
-               class="bg-op-80 inline-block px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition-colors duration-200 mr-2">
-            {{ item }}
-          </div>
-          <div class="flex flex-wrap overflow-y-auto max-h-400px justify-center">
-            <CollectionsCard v-for="item in collections" :key="item.id" :id="item.id" :name="item.name"
-                             :likes="item.likes" :imgSrc="itemImgPathPrefix+item.imgSrc">
-
-            </CollectionsCard>
-          </div>
+  <div class="flex h-full justify-center items-center">
+    <el-image class="w-full h-full -z-10 fixed" src="/images/39930673_p0.jpg" fit="cover"></el-image>
+    <div class="bg-white bg-op-50 rounded-xl w-70% h-70% shadow-xl shadow-gray-6 shadow-op-20 fixed p-4">
+      <div class="text-center font-bold text-2xl pb-2">Popular collections</div>
+      <div class="flex pb-2">
+        <div @click="handleTagsClick(item)" v-for="item in tags" :key="item"
+             class="bg-op-80 inline-block px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition-colors duration-200 mr-2">
+          {{ item }}
         </div>
+      </div>
+      <div class="flex flex-wrap overflow-y-auto max-h-82% justify-center">
+        <CollectionsCard v-for="item in collections" :key="item.id" :id="item.id" :name="item.name"
+                         :likes="item.likes" :imgSrc="itemImgPathPrefix + item.imgSrc">
+        </CollectionsCard>
       </div>
     </div>
   </div>
