@@ -29,7 +29,9 @@ const route=useRoute()
     <el-container>
       <el-header class="mt-5 border-b font-bold text-4.5">
         <span v-if="routeIcon !==undefined&&routeIcon !==''" >
-          <el-icon><component :is="routeIcon"></component></el-icon>
+          <el-icon>
+            <component :is="routeIcon"></component>
+          </el-icon>
         </span>
         {{ routeTitle }}
       </el-header>

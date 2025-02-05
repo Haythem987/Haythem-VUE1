@@ -31,8 +31,9 @@ const handleTagsClick = (text: string) => {
 </script>
 
 <template>
-  <el-image class="w-full h-full -z-10 fixed" src="/images/39930673_p0.jpg" alt="bg"></el-image>
-  <div class="flex w-full h-screen justify-center items-center">
+
+  <div class="flex w-screen h-screen justify-center items-center">
+    <el-image class="w-full h-full -z-10 fixed object-cover" src="/images/39930673_p0.jpg" alt="bg"></el-image>
     <div class="bg-white bg-op-50 rounded-xl w-70% h-70% shadow-xl shadow-gray-6 shadow-op-20 fixed">
       <div class="text-center font-bold text-2xl mb-4">Popular collections</div>
       <div class="flex">
